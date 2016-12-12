@@ -27,9 +27,8 @@
                             </svg> 
                             <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" MaxLength="20" TextMode="Password" ToolTip="Enter Password"></asp:TextBox>
                         </div>
-                        <h1 id="lblError" runat="server"></h1>
+                        <h1 id="lblError" runat="server" visible="true">&nbsp;</h1>
                         <button id="btnSubmit" type="button" runat="server">Sign in</button>
-                        <%--<asp:Button ID="btnSubmit" runat="server" Text="Sign in" OnClick="btnSubmit_Click" />--%>
                         <p class="signUp">
                             Dont have an account?
                             <a>Sign up</a>
