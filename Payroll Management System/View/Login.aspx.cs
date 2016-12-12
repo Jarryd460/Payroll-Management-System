@@ -15,6 +15,11 @@ namespace Payroll_Management_System
 {
     public partial class Login : System.Web.UI.Page
     {
+        protected void Page_Init(object sender, EventArgs e)
+        {
+            btnSubmit.ServerClick += btnSubmit_Click;
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             //if (!IsPostBack)
@@ -43,59 +48,55 @@ namespace Payroll_Management_System
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            //btnSubmit.Style.Remove("display");
-            //btnSubmit.Style.Add("display", "none");
-            //circularG.Style.Remove("display");
-            //circularG.Style.Add("display", "block");
+            //if (string.IsNullOrWhiteSpace(txtUsername.Text.Trim()) || string.IsNullOrWhiteSpace(txtPassword.Text.Trim()))
+            //{
+            //    lblError.InnerText = "Please enter Username and Password";
+            //    lblError.Style.Remove("visibility");
+            //    lblError.Style.Add("visibility", "visible");
+            //}
+            //else
+            //{
+            //    using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString))
+            //    {
+            //        SqlCommand cmd = new SqlCommand("spUserLogin", conn);
+            //        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+            //        cmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim());               
 
-            if (string.IsNullOrWhiteSpace(txtUsername.Text.Trim()) || string.IsNullOrWhiteSpace(txtPassword.Text.Trim()))
-            {
-                lblError.InnerText = "Please enter Username and Password";
-                lblError.Style.Remove("visibility");
-                lblError.Style.Add("visibility", "visible");
-            }
-            else
-            {
-                using (SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["DBCS"].ConnectionString))
-                {
-                    SqlCommand cmd = new SqlCommand("spUserLogin", conn);
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Username", txtUsername.Text.Trim());               
+            //        conn.Open();
 
-                    conn.Open();
+            //        using (SqlDataReader dr = cmd.ExecuteReader())
+            //        {
+            //            if (dr.Read())
+            //            {
+            //                string dbPasswordHash = dr["Password"].ToString();
+            //                string dbSalt = dr["Salt"].ToString();
+            //                int iterations = 4096;
 
-                    using (SqlDataReader dr = cmd.ExecuteReader())
-                    {
-                        if (dr.Read())
-                        {
-                            string dbPasswordHash = dr["Password"].ToString();
-                            string dbSalt = dr["Salt"].ToString();
-                            int iterations = 4096;
+            //                Rfc2898 hash = new Rfc2898(txtPassword.Text.Trim(), dbSalt, iterations);
+            //                string strHash = Convert.ToBase64String(hash.GetDerivedKeyBytes_PBKDF2_HMACSHA512(64));
 
-                            Rfc2898 hash = new Rfc2898(txtPassword.Text.Trim(), dbSalt, iterations);
-                            string strHash = Convert.ToBase64String(hash.GetDerivedKeyBytes_PBKDF2_HMACSHA512(64));
-
-                            if (strHash.Equals(dbPasswordHash))
-                            {
-                                lblError.InnerText = "A match";
-                            }
-                            else
-                            {
-                                lblError.InnerText = "Not a match";
-                            }                                            
-                        }
-                        else
-                        {
-                            lblError.InnerText = "Username and Password Incorrect";                            
-                        }
-                    }
-                }
-                lblError.Style.Remove("visibility");
-                lblError.Style.Add("visibility", "visible");
-            }
-
-            //btnSubmit.Style.Remove("display");
-            //btnSubmit.Style.Add("display", "block");
+            //                if (strHash.Equals(dbPasswordHash))
+            //                {
+            //                    lblError.InnerText = "A match";
+            //                    Response.AddHeader("REFRESH", "10;URL=WebForm1.aspx");
+            //                    //Server.Transfer("~/WebForm1.aspx");
+            //                }
+            //                else
+            //                {
+            //                    lblError.InnerText = "Not a match";
+            //                }                                            
+            //            }
+            //            else
+            //            {
+            //                lblError.InnerText = "Username and Password Incorrect";                            
+            //            }
+            //        }
+            //    }
+            //    lblError.Style.Remove("visibility");
+            //    lblError.Style.Add("visibility", "visible");
+            //}
+            System.Threading.Thread.Sleep(5000);
+            Response.Redirect("~/WebForm1.aspx");
         }
 
         private byte[] createSalt(int saltSize)

@@ -78,12 +78,6 @@ svg {
     transform: scale(1);
 }
 
-.login.inactive {
-    opacity: 0;
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-}
-
 .loginCheck {
     position: absolute;
     top: 16rem;
@@ -128,20 +122,6 @@ svg {
   margin-bottom: -0.4rem;
   margin-right: 0.5rem;
 }
-
-/*.loginUser.name path {
-  stroke-dasharray: 73.50196075439453;
-  stroke-dashoffset: 73.50196075439453;
-  -webkit-animation: animatePath 2s 0.5s forwards;
-          animation: animatePath 2s 0.5s forwards;
-}
-
-.loginUser.pass path {
-  stroke-dasharray: 92.10662841796875;
-  stroke-dashoffset: 92.10662841796875;
-  -webkit-animation: animatePath 2s 0.5s forwards;
-          animation: animatePath 2s 0.5s forwards;
-}*/
 
 #txtUsername, #txtPassword {
   display: inline-block;
@@ -197,24 +177,6 @@ svg {
           animation: rotate 0.5s 0.4s infinite linear;
 }
 
-#btnSubmit.success {
-  -webkit-transition: opacity 0.1s 0.3s, background-color 0.1s 0.3s, -webkit-transform 0.3s 0.1s ease-out;
-  transition: opacity 0.1s 0.3s, background-color 0.1s 0.3s, -webkit-transform 0.3s 0.1s ease-out;
-  transition: transform 0.3s 0.1s ease-out, opacity 0.1s 0.3s, background-color 0.1s 0.3s;
-  transition: transform 0.3s 0.1s ease-out, opacity 0.1s 0.3s, background-color 0.1s 0.3s, -webkit-transform 0.3s 0.1s ease-out;
-  -webkit-transform: scale(30);
-          transform: scale(30);
-  opacity: 0.9;
-}
-
-#btnSubmit.success:after {
-  -webkit-transition: opacity 0.1s 0s;
-  transition: opacity 0.1s 0s;
-  opacity: 0;
-  -webkit-animation: none;
-          animation: none;
-}
-
 .signUp {
   font-size: 1.2rem;
   color: #ABA8AE;
@@ -225,52 +187,26 @@ svg {
   cursor: pointer;
 }
 
-.ripple {
-  position: absolute;
-  width: 15rem;
-  height: 15rem;
-  margin-left: -7.5rem;
-  margin-top: -7.5rem;
-  background: rgba(0, 0, 0, 0.4);
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-animation: animRipple 0.4s;
-          animation: animRipple 0.4s;
-  border-radius: 50%;
-}
-
-@-webkit-keyframes animRipple {
-  to {
-    -webkit-transform: scale(3.5);
-            transform: scale(3.5);
-    opacity: 0;
-  }
-}
-
-@keyframes animRipple {
-  to {
-    -webkit-transform: scale(3.5);
-            transform: scale(3.5);
-    opacity: 0;
-  }
-}
 @-webkit-keyframes rotate {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
 }
+
 @keyframes rotate {
   to {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
 }
+
 @-webkit-keyframes animatePath {
   to {
     stroke-dashoffset: 0;
   }
 }
+
 @keyframes animatePath {
   to {
     stroke-dashoffset: 0;

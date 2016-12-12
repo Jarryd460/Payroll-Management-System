@@ -4,7 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Login</title>
+    <title>PMS</title>
     <link type="text/css" href="~/Css/Login.css" rel="stylesheet" />
 </head>
 <body>
@@ -28,7 +28,8 @@
                             <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" MaxLength="20" TextMode="Password" ToolTip="Enter Password"></asp:TextBox>
                         </div>
                         <h1 id="lblError" runat="server"></h1>
-                        <asp:Button ID="btnSubmit" runat="server" Text="Sign in" OnClick="btnSubmit_Click" />
+                        <button id="btnSubmit" type="button" runat="server">Sign in</button>
+                        <%--<asp:Button ID="btnSubmit" runat="server" Text="Sign in" OnClick="btnSubmit_Click" />--%>
                         <p class="signUp">
                             Dont have an account?
                             <a>Sign up</a>
