@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>PWDTK</id>
+    <version>2.0.0.2</version>
+    <title>PWDTK.NET</title>
+    <authors>thashiznets</authors>
+    <owners>thashiznets</owners>
+    <projectUrl>http://sourceforge.net/projects/pwdtknet/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>PWDTK.NET (Password Toolkit) is a .NET API which easily allows you to create crypto random salt strings and generate password hashes using a HMAC SHA-512 based version of the PBKDF2 specification. It also contains an implementation of password policies which are enforced using regular expressions.
+
+This has been designed with a focus on 'ease of use' without any trade off in security.
+
+The .dll is reversable in JustDecompile or your favourite MISL decompiler; However totally understand if you wish to review the source code and build your own .dll (or even modify it if you want) so the source code can be pulled from my repo here: https://github.com/Thashiznets/PWDTK.NET.git feel free to fork and request updates to the code if you feel you have something of value. (Note: if you are the NSA trying to put some kind of backdoor in.....I'm already onto you so your attempts will be futile!) New versions will be built and updated here in NuGet also as a package that can be imported easily yay!</description>
+    <summary>Supports .Net 4.5.1, .NET 4.5, .NET 4, .NET 4 Client, .NET 3.5, .NET 3.5 Client</summary>
+    <releaseNotes>Hallmanac added a GetRandomSaltHexString method so I added a PasswordToHashHexString method and a bit of code cleanup</releaseNotes>
+    <copyright>Copyright 2013 by thashiznets</copyright>
+    <language />
+    <tags>PWDTK PWDTK.NET DOTNET40 DOTNET35 DOTNET45 DOTNET451 PBKDF2 HMAC-SHA512 API .NET C# Password Salt Toolkit SHA512 Key Stretching RFC2898 Hash Hashing</tags>
+  </metadata>
+</package>
