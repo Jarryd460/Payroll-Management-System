@@ -7,19 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Payroll_Management_System {
+namespace Payroll_Management_System.View {
     
     
-    public partial class Login {
-        
-        /// <summary>
-        /// lblError control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblError;
+    public partial class ResetPassword {
         
         /// <summary>
         /// loginDetails control.
@@ -49,13 +40,22 @@ namespace Payroll_Management_System {
         protected global::System.Web.UI.WebControls.TextBox txtPassword;
         
         /// <summary>
-        /// lblForgotPassword control.
+        /// forgotPassword control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lblForgotPassword;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor forgotPassword;
+        
+        /// <summary>
+        /// lblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblError;
         
         /// <summary>
         /// btnSubmit control.
@@ -67,12 +67,12 @@ namespace Payroll_Management_System {
         protected global::System.Web.UI.HtmlControls.HtmlButton btnSubmit;
         
         /// <summary>
-        /// lblRegister control.
+        /// register control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor lblRegister;
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor register;
     }
 }

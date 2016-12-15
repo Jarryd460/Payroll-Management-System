@@ -18,6 +18,20 @@ namespace Payroll_Management_System
         protected void Page_Init(object sender, EventArgs e)
         {
             btnSubmit.ServerClick += btnSubmit_Click;
+            lblForgotPassword.ServerClick += ForgotPassword_Click;
+            lblRegister.ServerClick += SignUp_Click;
+
+
+        }
+
+        void ForgotPassword_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        void SignUp_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/View/Register.aspx");            
         }
 
         protected void Page_Load(object sender, EventArgs e)
@@ -25,25 +39,7 @@ namespace Payroll_Management_System
             //if (!IsPostBack)
             //{
             //    Session["SessionID"] = Session.SessionID;
-            //}
-
-            //using built in hash PBKDF2 SHA1
-            //byte[] salt = createSalt(24);
-            //byte[] hash = createPBKDF2Hash("Jarryd", salt);
-
-            //lblError.InnerText = Convert.ToBase64String(salt) + " " + Convert.ToBase64String(hash);
-
-            //using (HMACSHA512 HMACHSHA512 = new HMACSHA512())
-            //{
-            //    byte[] salt = createSalt(36);
-            //    int iterations = 4096;
-            //    byte[] password = Encoding.ASCII.GetBytes(txtPassword.Text.Trim());
-
-                //using Medo.Security.Cryptography hash - need Pbkdf2.cs file
-                //Pbkdf2 hash = new Pbkdf2(HMACHSHA512, password, salt, iterations);
-                //string strHash = Convert.ToBase64String(hash.GetBytes(64));
-                //lblError.InnerText = strHash;
-            //}
+            //}            
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
@@ -51,6 +47,7 @@ namespace Payroll_Management_System
             if (string.IsNullOrWhiteSpace(txtUsername.Text.Trim()) || string.IsNullOrWhiteSpace(txtPassword.Text.Trim()))
             {
                 lblError.InnerText = "Please enter Username and Password";
+                lblError.Style.Add("visibility", "visible");
             }
             else
             {
@@ -80,11 +77,13 @@ namespace Payroll_Management_System
                             else
                             {
                                 lblError.InnerText = "Username and Password Incorrect";
+                                lblError.Style.Add("visibility", "visible");
                             }
                         }
                         else
                         {
                             lblError.InnerText = "Username and Password Incorrect";
+                            lblError.Style.Add("visibility", "visible");
                         }
                     }
                 }
@@ -133,6 +132,24 @@ namespace Payroll_Management_System
 
     //conn.Open();
     //cmd.ExecuteNonQuery();
+    //}
+
+    //using built in hash PBKDF2 SHA1
+    //byte[] salt = createSalt(24);
+    //byte[] hash = createPBKDF2Hash("Jarryd", salt);
+
+    //lblError.InnerText = Convert.ToBase64String(salt) + " " + Convert.ToBase64String(hash);
+
+    //using (HMACSHA512 HMACHSHA512 = new HMACSHA512())
+    //{
+    //    byte[] salt = createSalt(36);
+    //    int iterations = 4096;
+    //    byte[] password = Encoding.ASCII.GetBytes(txtPassword.Text.Trim());
+
+    //using Medo.Security.Cryptography hash - need Pbkdf2.cs file
+    //Pbkdf2 hash = new Pbkdf2(HMACHSHA512, password, salt, iterations);
+    //string strHash = Convert.ToBase64String(hash.GetBytes(64));
+    //lblError.InnerText = strHash;
     //}
 
 }

@@ -12,8 +12,9 @@
         <div class="dialog">
             <div class="login">
                 <div class="loginCheck">                    
-                </div>
-                <div class="loginForm"> 
+                </div>                
+                <div class="loginForm">
+                    <h1 id="lblError" runat="server" visible="true">&nbsp;</h1>   
                     <form id="loginDetails" runat="server">
                         <div class="loginRow">
                             <svg class="loginUser name svg-icon" viewBox="0 0 20 20">
@@ -21,17 +22,17 @@
                             </svg>
                             <asp:TextBox ID="txtUsername" runat="server" placeholder="Username" MaxLength="20" ToolTip="Enter Username"></asp:TextBox> 
                         </div>
-                        <div class="loginRow">
+                        <div class="loginRow">                            
                             <svg class="loginUser pass svg-icon" viewBox="0 0 20 20">
                                 <path d="M0,20 20,20 20,8 0,8z M10,13 10,16z M4,8 a6,8 0 0,1 12,0"></path>                                
                             </svg> 
                             <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" MaxLength="20" TextMode="Password" ToolTip="Enter Password"></asp:TextBox>
-                        </div>
-                        <h1 id="lblError" runat="server" visible="true">&nbsp;</h1>
+                            <a id="lblForgotPassword" runat="server">Forgot Password?</a>
+                        </div>                        
                         <button id="btnSubmit" type="button" runat="server">Sign in</button>
                         <p class="signUp">
                             Dont have an account?
-                            <a>Sign up</a>
+                            <a id="lblRegister" runat="server">Sign up</a>
                         </p>
                     </form>                    
                 </div>
